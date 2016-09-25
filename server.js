@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 var content={
     title:'article1',
     heading:'PARAGRAPHS',
-    date:'25 Sep'
+    date:'25 Sep',
     content: `<p>
             this is the first paragraph which i am writing here
             </p>
