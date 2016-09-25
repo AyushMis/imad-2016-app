@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var content={
+var content1={
     title:'article1',
     heading:'PARAGRAPHS',
     date:'25 Sep',
@@ -20,6 +20,31 @@ var content={
             this is second para.
             </p>`
 };
+
+var content1={
+    title:'article2',
+    heading:'PARAGRAPHS',
+    date:'30 Sep',
+    content: `<p>
+            this is the first paragraph which i am writing here
+            </p>
+            <p>
+            this is second para.
+            </p>`
+};
+
+var content1={
+    title:'article3',
+    heading:'PARAGRAPHS',
+    date:'20 Sep',
+    content: `<p>
+            this is the first paragraph which i am writing here
+            </p>
+            <p>
+            this is second para.
+            </p>`
+};
+
 function createtemplate(data){
     var title = data.title;
     var heading = data.heading;
@@ -45,7 +70,15 @@ function createtemplate(data){
 }
 
 app.get('/article1', function (req, res) {
-  res.send(createtemplate(content))
+  res.send(createtemplate(content1))
+});
+
+app.get('/article2', function (req, res) {
+  res.send(createtemplate(content2))
+});
+
+app.get('/article3', function (req, res) {
+  res.send(createtemplate(content3))
 });
 
 
