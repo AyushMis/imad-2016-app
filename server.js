@@ -21,7 +21,7 @@ var content1={
             </p>`
 };
 
-var content1={
+var content2={
     title:'article2',
     heading:'PARAGRAPHS',
     date:'30 Sep',
@@ -33,7 +33,7 @@ var content1={
             </p>`
 };
 
-var content1={
+var content3={
     title:'article3',
     heading:'PARAGRAPHS',
     date:'20 Sep',
