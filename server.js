@@ -9,8 +9,43 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var content={
+    title:'article1',
+    heading:'PARAGRAPHS',
+    date:'25 Sep'
+    content: `<p>
+            this is the first paragraph which i am writing here
+            </p>
+            <p>
+            this is second para.
+            </p>`
+};
+function createtemplate(data){
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    var htmltemplate=`
+        <html>
+        <head>
+        <title>
+            ${title}
+        </title>
+        </head>
+        <body>
+            <h1>${heading}</h1>
+            <div> ${date} </div>
+            <div>
+            ${content}
+            </div>
+        </body>
+        </html>
+    `;
+    return htmltemplate;
+}
+
 app.get('/article1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+  res.send(createtemplate(content))
 });
 
 
