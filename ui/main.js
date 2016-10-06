@@ -13,7 +13,7 @@ button.onclick = function(){
             }
         }
     };
-    request.OPEN('GET','http://ayushmis.imad.hasura-app.io/',true);
+    request.OPEN('GET','http://ayushmis.imad.hasura-app.io/counter',true);
     request.send(null);
     
 }
